@@ -1,0 +1,8 @@
+SetEnv APPENV development
+
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteRule ^(.*)$ /index.php/$1 [L]
